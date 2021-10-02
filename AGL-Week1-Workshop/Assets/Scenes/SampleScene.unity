@@ -485,8 +485,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587410090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.1, y: 3.7, z: 0}
-  m_LocalScale: {x: 0.93624747, y: 0.62366575, z: 1.7833289}
+  m_LocalPosition: {x: 10.1, y: 2.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1302568532}
   m_RootOrder: 1
@@ -954,8 +954,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302568529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.64, y: -2.26, z: -0.12973}
-  m_LocalScale: {x: 0.14897966, y: 0.24591717, z: 0.19636853}
+  m_LocalPosition: {x: -8.6705, y: -2.782, z: -0.12973}
+  m_LocalScale: {x: 0.14897013, y: 0.24592265, z: 0.19636853}
   m_Children:
   - {fileID: 681524114}
   - {fileID: 587410091}
@@ -1022,4 +1022,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 587410091}
-  shotPrefab: {fileID: 6723804429300125222, guid: f43d89d6b79977c48abad874708a255e, type: 3}
+  shotPrefab: {fileID: 3285103448250837101, guid: 4920f4d1ea8a5604a9d8f97ab49fa2b2, type: 3}
