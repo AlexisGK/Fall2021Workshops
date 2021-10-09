@@ -8,12 +8,16 @@ public class GroundChecker : MonoBehaviour
     public bool IsGrounded => _groundedCount > 0;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        _groundedCount++;
+        if (other.sharedMaterial && other.sharedMaterial.name == "groundMaterial") {
+            _groundedCount++;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        _groundedCount--;
+    	if (other.sharedMaterial && other.sharedMaterial.name == "groundMaterial") {
+            _groundedCount--;
+        }
     }
 }
    
