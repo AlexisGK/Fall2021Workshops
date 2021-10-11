@@ -86,8 +86,11 @@ public class PlayerCont : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (groundChecker.IsGrounded == false)
+        if (groundChecker.IsGrounded && _currentVelocity.y < 0) {
+            _currentVelocity.y = 0;
+        } else {
             _currentVelocity.y -= gravity * Time.deltaTime;
+        }
     }
 
     private void TryToJump()
