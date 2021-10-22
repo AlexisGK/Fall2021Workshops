@@ -11,7 +11,7 @@ public class GroundChecker : MonoBehaviour
             ray.origin = transform.position;
             ray.direction = Vector2.down;
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, layerMask);
-            return hit.collider && hit.collider.sharedMaterial && hit.collider.sharedMaterial.name == "groundMaterial" && hit.distance <= 0.05;
+            return hit.collider && hit.collider.sharedMaterial && hit.collider.sharedMaterial.name == "groundMaterial" && hit.distance <= 0.1;
         }
     }
 }

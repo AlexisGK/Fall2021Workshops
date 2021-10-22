@@ -15,6 +15,8 @@ public class PlayerCont : MonoBehaviour
 
     public bool isSprinting = true;
 
+    public bool hasDoubleJumped = false;
+
     private Vector2 _currentInput;
     private Vector3 _currentVelocity;
 
@@ -58,6 +60,7 @@ public class PlayerCont : MonoBehaviour
         GUILayout.Label($"Current Speed: {playerRigidbody.velocity.magnitude}");
         GUILayout.Label($"Is Grounded: {groundChecker.IsGrounded}");
         GUILayout.Label($"Velocity: {playerRigidbody.velocity}");
+        GUILayout.Label($"HasDoubleJumped: {hasDoubleJumped}");
     }
 
     // Start is called before the first frame update
@@ -73,6 +76,8 @@ public class PlayerCont : MonoBehaviour
         MoveWithInput();
 
         ApplyGravity();
+
+        if (groundChecker.IsGrounded) {hasDoubleJumped = false;}
 
         if (Input.GetKeyDown(KeyCode.Space))
             TryToJump();
@@ -95,8 +100,10 @@ public class PlayerCont : MonoBehaviour
 
     private void TryToJump()
     {
-        if (groundChecker.IsGrounded)
+        if (groundChecker.IsGrounded || !hasDoubleJumped) {
             _currentVelocity.y = jumpSpeed;
+            hasDoubleJumped = true;
+        }
     }
 
     private void Flip()
